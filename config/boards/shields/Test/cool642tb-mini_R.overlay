@@ -5,12 +5,11 @@
 };
 
 &kscan0 {
-    col-gpios = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 9 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 8 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 7 GPIO_ACTIVE_HIGH>
-        , <&gpio0 10 GPIO_ACTIVE_HIGH>
-        ;
+    col-gpios = <&xiao_d 10 GPIO_ACTIVE_HIGH>,
+                <&xiao_d 9 GPIO_ACTIVE_HIGH>,
+                <&xiao_d 8 GPIO_ACTIVE_HIGH>,
+                <&xiao_d 7 GPIO_ACTIVE_HIGH>,
+                <&gpio0 10 GPIO_ACTIVE_HIGH>;
 };
 
 / {
@@ -18,20 +17,19 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         excluded-positions = <
-            20 // L
-            22 // Z
-            30 // M
-            31 // ,
-            32 // .
-            34 // Shift
-            36 // Command
+            20 /* L */,
+            22 /* Z */,
+            30 /* M */,
+            31 /* , */,
+            32 /* . */,
+            34 /* Shift */,
+            36 /* Command */
         >;
     };
 
-    trackball_listener {
+    trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-
         input-processors = <&zip_temp_layer 2 10000>;
     };
 };
@@ -66,14 +64,11 @@
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
-        trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        // automouse-layer = <1>;
         scroll-layers = <6>;
     };
 };
-
