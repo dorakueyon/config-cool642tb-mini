@@ -83,10 +83,10 @@
 
         SYMBOL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+&kp CARET               &kp EXCLAMATION              &kp AMPERSAND      &kp PIPE              &kp DOLLAR                                 &kp AT              &kp EQUAL            &kp PLUS         &kp ASTERISK     &kp PERCENT
+&mt LEFT_CONTROL MINUS  &mt LEFT_SHIFT LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans      &trans  &kp LEFT_ARROW      &kp DOWN_ARROW       &kp UP_ARROW     &kp RIGHT_ARROW  &kp SINGLE_QUOTE
+&mt LEFT_SHIFT MINUS    &kp HASH                     &kp BACKSLASH      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans      &trans  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(RS(TAB))  &kp LC(TAB)      &kp DOUBLE_QUOTES
+&kp LEFT_ALT            &trans                       &trans             &trans                &trans                 &trans      &trans  &trans                                                                     &trans
             >;
         };
 
