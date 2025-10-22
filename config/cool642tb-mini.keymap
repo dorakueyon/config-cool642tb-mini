@@ -37,7 +37,7 @@
 
             tap-ms = <20>;
         };
-        
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -58,7 +58,7 @@
 &mt LEFT_SHIFT LANG2  &kp LC(LEFT_ALT)  &mt LEFT_GUI LANG2  &lt 3 SPACE  &lt 5 ESC  &mt LEFT_ALT TAB      &kp BACKSPACE  &lt 4 ENTER                             &mt RIGHT_SHIFT LANG1
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION {
@@ -77,6 +77,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 6   &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         NUMBER {
@@ -87,7 +89,7 @@
 &trans                &trans                   &trans            &trans             &trans        &trans      &trans  &kp RIGHT_COMMAND                                            &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         SYMBOL {
@@ -97,6 +99,8 @@
 &mt LEFT_SHIFT MINUS    &kp HASH                     &kp BACKSLASH      &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans      &trans  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp LC(RS(TAB))  &kp LC(TAB)      &kp DOUBLE_QUOTES
 &kp LEFT_ALT            &trans                       &trans             &trans                &trans                 &trans      &trans  &trans                                                                     &trans
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         SPECIAL {
@@ -106,6 +110,8 @@
 &trans     &trans     &kp LS(LG(NUMBER_5))  &kp LG(LC(C))  &kp LS(LG(NUMBER_4))  &trans      &trans  &trans         &trans         &trans         &trans         &bt BT_CLR
 &trans     &trans     &trans                &trans         &trans                &trans      &trans  &trans                                                      &bt BT_CLR_ALL
             >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_6 {
